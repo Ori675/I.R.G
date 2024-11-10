@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 달리기 게임</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'self'">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #loginForm {
+            width: 320px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #loginForm h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            width: 60px;
+            text-align: left;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #loginForm button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #loginForm button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h2>무한 달리기 게임</h2>
+        
+    <div class="input-group">
+        <label for="studentId">학번 :</label>
+        <input type="text" id="studentId" placeholder="학번을 입력하세요" required>
+    </div>
+
+    <div class="input-group">
+        <label for="name">이름 :</label>
+        <input type="text" id="name" placeholder="이름을 입력하세요" required>
+    </div>
+        
+        <button>로그인</button>
+    </div>
+
+    <canvas id="gameCanvas" style="display:none;"></canvas>
+
+    <!-- 외부 스크립트 로드 -->
+    <script src="game.js"></script>
+</body>
+</html>
